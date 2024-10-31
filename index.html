@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teclado Lindinho</title>
+    <title>PADSLX</title>
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div><h1>TECLADO LINDINHO</h1></div>
-    <div class="botoes-desk"> 
-        <button id="soundA">Som A</button>
-        <audio id="audioA" src="sounds/zapsplat_cartoon_character_male_high_pitched_laugh_funny_goofy_92012.mp3"></audio>
-        
-        <button id="soundS">Som S</button>
+    <nav>
+        <button class="nav-button">
+            <svg class="svg-stripe" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </button>
+
+        <h1>PADS-LX</h1>
+    </nav>
+    <div class="botoes-desk">
+        <div class="linha-1">
+        <button class="botao-pad" id="soundA">Som A</button>
+        <audio id="audioA" src="sounds/zapsplat_cartoon_character_male_high_pitched_laugh_funny_goofy_92012.mp3"></audio> 
+        <button class="botao-pad" id="soundS">Som S</button>
         <audio id="audioS" src="/sounds/som_s.mp3"></audio>
         
-        <button id="soundD">Som D</button>
-        <audio id="audioD" src="/sounds/som_d.mp3"></audio>
+        <button class="botao-pad" id="soundD">Som D</button>
+        <audio id="audioD" src="sounds/vai-palmeiras.mp3"></audio>
         
-        <button id="soundF">Som F</button>
+        <button class="botao-pad" id="soundF">Som F</button>
         <audio id="audioF" src="/sounds/som_f.mp3"></audio>
-        
-        <button id="soundG">Som G</button>
+        </div>
+
+        <div class="linha-1">
+        <button class="botao-pad" id="soundG">Som G</button>
         <audio id="audioG" src="/sounds/som_g.mp3"></audio>
         
-        <button id="soundH">Som H</button>
+        <button class="botao-pad" id="soundH">Som H</button>
         <audio id="audioH" src="/sounds/som_h.mp3"></audio>
         
-        <button id="soundJ">Som J</button>
+        <button class="botao-pad" id="soundJ">Som J</button>
         <audio id="audioJ" src="/sounds/som_j.mp3"></audio>
         
-        <button id="soundK">Som K</button>
+        <button class="botao-pad" id="soundK">Som K</button>
         <audio id="audioK" src="/sounds/som_k.mp3"></audio>
+    </div>
     </div>
 </body>
 </html>

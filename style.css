@@ -1,0 +1,61 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.svg-stripe{
+    width: 3rem;
+    height: 3rem;
+}
+nav {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    background-color: #02000A;
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+body {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FB7600;
+}
+
+.linha-1{
+    padding: 0.2rem;
+}
+
+.botoes-desk{
+    gap: 10rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.botao-pad{
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: white;
+    background-color: #02000A;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 15px;
+}
+
+.botao-pad:hover{
+    color: #02000A;
+    outline: none;
+    background-color: white;
+}
+.botao-pad.active{
+    color: #02000A;
+    outline: none;
+    background-color: white;
+}

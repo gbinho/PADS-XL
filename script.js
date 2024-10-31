@@ -11,28 +11,33 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     function playAudio(audio) {
-        audio.pause(); // Pausa o áudio se estiver tocando
-        audio.currentTime = 0; // Reinicia o áudio
+        audio.pause();
+        audio.currentTime = 0;
         audio.play().catch(error => console.error("Erro ao reproduzir o áudio:", error));
     }
 
-    // Adiciona eventos de clique aos botões
     Object.keys(sounds).forEach(key => {
         sounds[key].button.addEventListener("click", () => playAudio(sounds[key].audio));
     });
 
-    // Adiciona eventos de tecla pressionada
     window.addEventListener("keydown", (event) => {
-        const key = event.key.toUpperCase(); // Converte a tecla para maiúscula
+        const key = event.key.toUpperCase();
         if (sounds[key]) {
             playAudio(sounds[key].audio);
+            sounds[key].button.classList.add("active");
         }
     });
 
-    // Adiciona eventos de toque na tela (para mobile)
+    window.addEventListener("keyup", (event) => {
+        const key = event.key.toUpperCase();
+        if (sounds[key]) {
+            sounds[key].button.classList.remove("active");
+        }
+    });
+
     Object.keys(sounds).forEach(key => {
         sounds[key].button.addEventListener("touchstart", (event) => {
-            event.preventDefault(); // Evita o clique duplo em dispositivos móveis
+            event.preventDefault();
             playAudio(sounds[key].audio);
         });
     });
