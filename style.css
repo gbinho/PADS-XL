@@ -6,6 +6,7 @@
 .svg-stripe{
     width: 3rem;
     height: 3rem;
+    color: white;
 }
 nav {
     font-size: 1.6rem;
@@ -20,6 +21,22 @@ nav {
     flex-direction: row;
     align-items: center;
 }
+.nav-button{
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    background-color: transparent; /* Remove a cor de fundo */
+    border: none; /* Remove o contorno */
+    outline: none; /* Remove o contorno do foco */
+}
+.nav-button:hover{
+    animation: rotate 0.4s ease forwards; 
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(180deg); }
+}
+
 body {    
     display: flex;
     flex-direction: column;
